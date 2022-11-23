@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
 
- https://readcereal.com/
+ https://kapten-son.com/en
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
@@ -118,28 +118,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  Ik heb een andere website gekozen omdat alle content werd vernieuwd door de black friday thema op 'kapten & son'. Nu heb ik opnieuw een html bestand gemaakt en alle voorgaande stappen (toegankelijkheidstest en breakpoints). Ben nu vooral aan het experimenteren met de css onderdelen van flexbox, grid en position omdat ik daar nog moeite mee heb.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
- 
-  student 1: Marc
-  Algemeen, Hamburger menu, Github (vullen we het goed in, zoals website link).
-  
-  student 2: Robin
-  Is mijn HTML goed uitgewerkt? Of wat mist er nog of kan beter.
-  Kun je grid, flexbox en position door elkaar gebruiken?
-  
-  student 3: Aya
-  Eigen website: hoe zijn hier de h'tjes verdeeld (h1, h2, etc.)?
-  
-  student 4: Mats
-  "een plan opstellen ivm huiswerk"
+  | student 1      | student 2          | student 3    | student 4        |
+  | ---            | ---                | ---          | ---              |
+  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Algemeen, Hamburger menu, Github (vullen we het goed in, zoals website link)          | ...                | ...          | ...              |
 
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
