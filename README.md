@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
 
- https://readcereal.com/
+ https://kapten-son.com/en
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
@@ -46,7 +46,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Menu pagina 
-  <img src="./image/schlinder.jpg" width="375px" alt="schlinder">
+  <img src="./images/shop.jpg" width="375px" alt="blackfriday pagina">
  
 </details>
 
@@ -65,26 +65,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
-
   #### Muis en Toetsenbord 
-  Het gebruik van de 'TAB' knop verliep beter dan gedacht. Door het menu kon ik het de trassering zwak aflezen door de zwarte omranding. Het is te onderscheiden, maar zeer subtiel omdat het dezelfde kleur is als de primaire typografie. Ook wanneer die is geleselecteerd op een afbeelding verdwijnt de trassering.
+  / bevindingen oude
+  De selectie met het 'TAB' knopje was visueel niet te zien. Er was niets te zien als een trassering om de selectie te onderscheiden van de andere content elementen. Als ik er iets positiefs uit kan halen is dat hij wel naar beneden scrolt wanneer de tab verspringt op een lagere content element. Ik zie wel dat de 'TAB' knop wel werkt omdat ik onderin de naam van de selectie te zien krijg.
 
-  <img src="./images/tab.png" width="375px" alt="tabfout">
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-  Hoe deze problemen opgelost kunnen worden is door een andere kleur te gebruiken voor de omranding en de breedte van de lijn dikker maken. Ook wanneer die geslecteerd staat op een afbeelding moet de trassering zichtbaar zijn.
+  Hoe deze problemen opgelost kunnen worden is door kleur te gebruiken voor de omranding en de breedte van de lijn dik te maken. Ook wanneer die geslecteerd staat op een afbeelding moet de trassering zichtbaar zijn.
+
+  <img src="./readme-images/tab.png" width="375px" alt="tabfout">
+
+  
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
 
+  Motoriek is het beter te gebruiken dan verwacht omdat het op een klein scherm veel scrollen is en dat hoeft niet op een precieze manier. Ik heb deze beperking getest door m'n duimen en wijsvingers aan elkaar te elastieken. Ik merkte wel dat het vasthouden van de device zelf oncomfortabel is. 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  
 
+  
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 </details>
@@ -118,25 +118,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb een eerste versie van m'n html op de eerste pagina. Ook ben ik alvast gaan kijken naar custom properties en allemaal random kleuren gezet op de html elementen zodat ik goed weet of hij goed is geselecteerd.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+student 1: Marc
+- Algemeen, Hamburger menu, Github (vullen we het goed in, zoals website link).
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | Algemeen, Hamburger menu, Github (vullen we het goed in, zoals website link)          | ...                | ...          | ...              |
+student 2: Robin
+- Is mijn HTML goed uitgewerkt? Of wat mist er nog of kan beter?
+- Kun je grid, flexbox en position door elkaar gebruiken? Of kan het ook anders?
+
+student 3: Aya
+- Eigen website: hoe zijn hier de h'tjes verdeeld (h1, h2, etc.)?
+
+student 4: Mats
+- Planning opstellen voor huiswerk.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - punt 1: Zet alle figures in articles.
+  - Metadata zet je in een footer, ookal staat het in een main (it's true:) 
+  - punt 2: Logo > h1 , titel article > h2 , section met titel > h3 , feature products >h2 , ondertitel feature products > h2
+  
 
 </details>
 
@@ -152,15 +159,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  <img src="readme-images/versieweek3" width="375px" alt="tussenstandvanweek 3">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  student 1: Marc
+  - Geen specifieke vragen. Alleen kijken naar zijn code.
+
+  student 3: Aya
+  - Aya: Je kan de content veranderen zoals bijvoorbeeld een hamburgermenu img naar een kruisje door 'content: url()' in je css te zetten. Alleen hoe doe je dat als je geen url hebt maar een svg afbeelding?
 
 
   ### Verslag van meeting
