@@ -16,19 +16,35 @@
             <ul>
                 <li><h1><a href="./index.html">C E R E A L</a></h1></li>
                 <li><img src="./image/user.png" alt="profile"></li>
-                <li><img src="./image/search.png" alt="search"></li>
+                <li><img src="./image/search.png" alt="search">
+                    <div >
+                    <input for="search" type="text" placeholder="Search...">
+                  </div>
+                </li>
                 <!-- uitklapbaar hamburgermenu --> 
-                <li><button aria-label="menu"><img src="./image/lines.png" alt="hamburgermenu"></button></li>
-            </ul>
-        </nav>
+                <li>
+                    <button aria-label="menu">
+                        <img src="./image/lines.png" alt="hamburgermenu">
+                    </button>
+                    <ul>
+                        <li>ARCHITECTURE</li>
+                        <li>DESIGN</li>
+                        <li>ART</li>
+                        <li>STYLE</li>
+                    </ul>
+                </li>
 
-        
+            </ul>
+        </nav>    
     </header> 
+
     <main>
         <a href="./schlindert.html">
             <img src="./image/home1.jpg" alt="palm">
         </a>
-        
+        <!-- <a href="#">
+            <img src="./image/arrow.png" alt="arrow sticky">
+        </a> -->
         <section>
             <h2>Latest Articles</h2>
             <article>
@@ -170,42 +186,47 @@
     <footer>
         <p>Cereal is a biannual, travel & style magazine based in the United Kingdom. Each issue focusses on a select number of destinations, alongside engaging interviews and stories on unique design, art, and fashion.</p>
         <p>© C E R E A L</p>
-        <section>
-            <!-- H3 of H4 of P -->
-            <h4>INFO</h4>
-            <ul>
-                <li>Stockists</li>
-                <li>Contact</li>
-                <li>Career</li>
-            </ul>
-            <span>MEDIA</span>
-            <ul>
-                <li>Playlists</li>
-                <li>Films</li>
-            </ul>
-            <span>WEBSITE</span>
-            <ul>
-                <li>Terms</li>
-                <li>Shipping</li>
-                <li>FAQs</li>
-            </ul>
-        </section>
-        <div>
-            <form> 
-                <span>NEWSLETTER</span>
-                <input type="text" placeholder="Enter email">
-                <button type="submit"><img src="./image/right-arrow.png" alt="arrow"></button>
-            </form>
-
-            <ul>
-                <li><a href="https://www.instagram.com/cerealmag/"><img src="./image/instagram.png" alt="instagram"></a></li>
-                <li><a href="https://www.twitter.com/cerealmag/"><img src="./image/twitter.png" alt="twitter"></a></li>
-                <li><a href="https://www.facebook.com/cerealmag/"><img src="./image/facebook-app-symbol.png" alt="facebook"></a></li>
-                <li><a href="https://uk.pinterest.com/cerealmag/"><img src="./image/pinterest.png" alt="pinterest"></a></li>    
-            </ul>
-        </div>
+        <ul>
+		    <li>
+			    <h3>INFO</h3>
+			    <ul>
+                    <li>Stockists</li>
+                    <li>Contact</li>
+                    <li>Career</li>
+			    </ul>
+		    </li>
+		    <li>
+			    <h3>MEDIA</h3>
+                <ul>
+                    <li>Playlists</li>
+                    <li>Films</li>
+                </ul>
+            </li>
+            <li>
+                <h3>WEBSITE</h3>
+                <ul>
+                    <li>Terms</li>
+                    <li>Shipping</li>
+                    <li>FAQs</li>
+                </ul>
+            </li>
+	    </ul>
+        <h3>NEWLETTER</h3>
+            <form action="/">
+            <!-- door "placeholder" te gebruiken kan je in de input tekst zetten die weg gaat zodra je erin typt -->
+              <input type="email" id="email" placeholder="Enter email">
+              <input type="submit" value="Submit">
+            </form> 
+        <ul>
+            <li><a href="https://www.instagram.com/cerealmag/"><img src="./image/instagram.png" alt="instagram"></a></li>
+            <li><a href="https://www.twitter.com/cerealmag/"><img src="./image/twitter.png" alt="twitter"></a></li>
+            <li><a href="https://www.facebook.com/cerealmag/"><img src="./image/facebook-app-symbol.png" alt="facebook"></a></li>
+            <li><a href="https://uk.pinterest.com/cerealmag/"><img src="./image/pinterest.png" alt="pinterest"></a></li>    
+        </ul>
     </footer>
 </body>
 
+<script src="./scripts/script.js"></script>
 	
 </html>
+<!-- padding: boven rechts onder links; */ -->

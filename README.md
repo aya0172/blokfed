@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
 
- https://kapten-son.com/en
+ https://readcereal.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
@@ -46,7 +46,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Menu pagina 
-  <img src="./images/shop.jpg" width="375px" alt="blackfriday pagina">
+  <img src="./images/readme-images/screen2" width="375px" alt="articleschlindert">
+  <img src="./images/readme-images/screen2.2" width="375px" alt="tweedehelft pagina">
  
 </details>
 
