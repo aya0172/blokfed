@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    
+<body class="login">
+    <header>
+        <nav>
+            <ul>
+                <li><p><a href="./index.html">C E R E A L</a></p></li>
+                <li><img src="./image/user.png" alt="profile"></li>
+                <li>
+                    <button>
+                        <img src="./image/search.png" alt="search">
+                    </button>
+                    <div >
+                    <input for="search" type="text" placeholder="Search...">
+                  </div>
+                </li>
+                <!-- uitklapbaar hamburgermenu --> 
+                <li>
+                    <button aria-label="menu">
+                        <img src="./image/lines.png" alt="hamburgermenu">
+                    </button>
+                    <ul>
+                        <li>ARCHITECTURE</li>
+                        <li>DESIGN</li>
+                        <li>ART</li>
+                        <li>STYLE</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>    
+    </header> 
+   <main>
+    <h1>MY ACCOUNT</h1>
+    <h2>Login</h2>
+    <form>
+        <form action="mailto: cereal@gmail.com" method="post">
+          <label for="emailadress">EMAIL ADDRESS</label>
+          <input name="emailaddress" type="email" placeholder="anything@example.com" required/>
+          <label for="password">PASSWORD </label>
+          <input name="lastName" placeholder="Last Name" required/>
+          <label for="emailAddress">Email Address <sup>*</sup></label>
+          <input name="emailaddress" type="email" placeholder="anything@example.com" required/>
+    </form>
+   </main>
+  
 </body>
+
+<script src="./scripts/script.js"></script>
+	
 </html>
