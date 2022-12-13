@@ -15,39 +15,43 @@
         <nav>
             <ul>
                 <li><h1><a href="./index.html">C E R E A L</a></h1></li>
-                <li><img src="./image/user.png" alt="profile"></li>
+                <li>
+                    <a href="./login.html">
+                        <img src="./image/user.png" alt="profile">
+                    </a>
+                </li>
                 <li>
                     <button>
-                        <img src="./image/search.png" alt="search">
+                        <img id="search" src="./image/search.png" alt="search">
                     </button>
-                    <div >
                     <input for="search" type="text" placeholder="Search...">
-                  </div>
+                 
                 </li>
                 <!-- uitklapbaar hamburgermenu --> 
                 <li>
-                    <button aria-label="menu">
+                    <button aria-hidden="true">
                         <img src="./image/lines.png" alt="hamburgermenu">
                     </button>
-                    <ul>
+                    <!-- <ul>
                         <li>ARCHITECTURE</li>
                         <li>DESIGN</li>
                         <li>ART</li>
                         <li>STYLE</li>
-                    </ul>
-                </li>
+                    </ul> 
+                </li> -->
 
             </ul>
         </nav>    
     </header> 
 
     <main>
-        <a href="#">
-            <img src="./image/home1.jpg" alt="palm">
-        </a>
-        <!-- <a href="#">
-            <img src="./image/arrow.png" alt="arrow sticky">
-        </a> -->
+        <div>
+            <img src="./image/home1.jpg" alt="home" class="image">
+            <div >
+              <p>CEREAL MAGAZINE</div>
+            </div>
+          </div>
+            
         <section>
             <h2>Latest Articles</h2>
             <article>
@@ -216,7 +220,7 @@
         <h3>NEWLETTER</h3>
             <form action="/">
             <!-- door "placeholder" te gebruiken kan je in de input tekst zetten die weg gaat zodra je erin typt -->
-              <input type="email" id="email" placeholder="Enter email">
+              <input type="email"  placeholder="Enter email">
               <input type="submit" value="Submit">
             </form> 
         <ul>
@@ -231,4 +235,3 @@
 <script src="./scripts/script.js"></script>
 	
 </html>
-<!-- padding: boven rechts onder links; */ -->

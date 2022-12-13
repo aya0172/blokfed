@@ -15,14 +15,12 @@ body{
 	background-color: var(--color-background);
 }
 
-body::selection {
-	color: red;
-	background: yellow;
+::selection {
+	color: var(--color-fontwhite);
+	background-color: var(--color-text);
   }
 
 
-
-/*********************/
 /* CUSTOM PROPERTIES */
 
 :root {
@@ -37,6 +35,7 @@ body::selection {
 	--color-gray: #808080;
 	--pading-detail:0px 20px 0px 20px;
 	--backgroundcolor-footer: #4d4d4d;
+	--backgroundcolor-button:#ebe9eb;
 }
 
 @media (prefers-color-scheme:dark) {
@@ -51,28 +50,13 @@ body::selection {
 	  --color-nav:rgb(111, 111, 111);
 	}
   }
-  
 
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
+/* MIJN STYLING */
 *{
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
-	/* background-color: var(--color-background); */
-
-
 
 nav {
 	width: 100vw;
@@ -104,19 +88,27 @@ nav ul li:nth-of-type(3) button{
 	border: none;
 	background-color: transparent;
 }
-nav ul li:nth-of-type(3) button.balkopen img{
+.balkopen img{
 	content: url(/image/close.png);
 	outline: none;
 	height: 14px;
 	width: 14px;
-	margin-left: 3px;
-	
+	margin-left: 3px;	
+}
+
+nav>ul>li:last-of-type>button{
+	border:none;
+	border-radius:.25em; 
+	background-color: transparent;
 }
 
 nav>ul>li img{
 	width: 20px;
 	height: 20px;
 }
+
+
+
 
 /* serach bar */
 
@@ -125,7 +117,14 @@ nav ul li:nth-of-type(3) input{
 	padding: .4em;
 	margin-top: 1em;
 	display: none;
+	
 }
+
+nav ul li:nth-of-type(3) input:focus-visible {
+	border: #ff8527 4px solid;
+	transform:translate(-.25em, -.25em);
+  }
+
 
 nav ul li:nth-of-type(3) .opensearch{
 	display: block;
@@ -158,8 +157,9 @@ nav ul li h1 a{
 /* nav voor tweede pagina omdat de titel van de article de h1 wordt */
 nav ul li p{
 	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	letter-spacing: 3px;
 	font-size: 20px;
-	color: var(--color-text);
 }
 nav ul li p a{
 	text-decoration: none;
@@ -182,15 +182,77 @@ section{
 
 /* eerste afbeelding */
 
-.home>main>a>img{
+.home>main>div>img{
+	display: block;
 	width: 100%;
 	padding:0px 20px 0px 20px;
 }
 
-
-.home a img{
-	width: 100%;
+/* algemene styling */
+a:focus{
+	border: #ff8527 4px solid;
 }
+
+
+
+
+/* animatie begin overlaycereal magazine */
+
+main>div {
+	position: relative;
+}
+  
+main>div>img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+  
+div>div {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	transition: .5s ease;
+}
+
+main>div:hover div{
+	bottom: 0;
+	height: 100%;
+}
+ 
+div>div {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	transition: .5s ease;
+}
+  
+div:hover div{
+bottom: 0;
+height: 100%;
+}
+
+
+div>p{
+	color: white;
+	font-size: 60px;
+	font-family: 'Noto Serif Khojki', serif;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* animatie voor inzoomen van afbeeldingen op artikelen */
 
 .home a img:hover{
 	animation-name:zoom-animation;
@@ -207,8 +269,14 @@ section{
 	  opacity: 0.8;
 	}
   }
+
+/* image van elk artikel */
+
+  .home a img{
+	width: 100%;
+}
   
-/* Meta daata */
+/* Meta data van elk artikel */
 
 
 .home main footer a::after{
@@ -285,8 +353,8 @@ section{
 
 .home section:nth-of-type(2)>a:first-of-type:hover,
 .home section:nth-of-type(2)>a:first-of-type:focus-visible {
-    background: rgb(158, 158, 158) 75%;
-  box-shadow:inset .25rem .25rem #0006;;
+  background: rgb(158, 158, 158) 75%;
+  box-shadow: .25rem .25rem #0006;;
   color: white;
 }
 
@@ -350,7 +418,7 @@ section:nth-of-type(2) ul li img{
 	color: var(--color-fontwhite);
 	margin: 10px 0px 10px 0px ;
 }
-/* padding: boven rechts onder links; */
+
 
 .home section:nth-of-type(2) li p{
 	text-decoration: none;
@@ -409,7 +477,6 @@ footer ul li{
 footer > ul {
 	display: flex;
 	list-style: none;
-	justify-content: center;
 	max-width: 20rem;
 	margin-top: 40px;
 }
@@ -445,9 +512,8 @@ footer > ul > li > ul {
 
 
 footer:last-of-type>ul li img{
-	width: 20%;
-	height: 30%;
-	padding: 20px;
+	width: 40%;
+	height: 40%;
 }
 
 footer form{
@@ -482,7 +548,7 @@ footer form{
     vertical-align: 1px;
     font-weight: 400;
 	line-height: 1;
-	background-color: #4d4d4d;
+	background-color:var(--backgroundcolor-footer);
 	margin: 0 auto;
 	padding: 100px 37px;
 }
@@ -523,7 +589,7 @@ footer form{
 	margin-top: 15px;
 }
 
-schlindert main section footer{
+.schlindert main section footer{
 	margin-top: 0px;
 	margin-left: 20px;
 }
@@ -595,10 +661,6 @@ schlindert main section footer{
 	font-weight: bold;
 }
 
-.schlindert article p>a:visited {
-	color:rgb(119, 37, 137);
-  }
-
 .schlindert article ul{
 	padding: 20px 0; 
     margin-bottom: 20px;
@@ -608,7 +670,6 @@ schlindert main section footer{
 	border-top: 1px solid #bebebe;
     padding-top: 20px;
 }
-
 .schlindert article li{
 	list-style: none;
     display: block;
@@ -621,39 +682,25 @@ schlindert main section footer{
     font-style: italic;
     margin-left: 2px;
 }
-/* nav ul li:nth-of-type(3) img{
-	background-color: aqua;
+
+/* link visited */
+.schlindert article p>a:visited {
+	color:rgb(119, 37, 137);
 }
 
-div{
-	justify-content: center;
-	margin-right: 60px;
-}
 
-nav form{
-	opacity: 0;
-	
-}
 
-nav form:focus-within{
-	opacity: 1;
-	transition: .2s;
-}
 
-.open{
-	opacity: 1;
-	display: flex;
-} */
 
 
 /* Newsletter */
 
-/* display flex om beetje whitespace weg te halen */
-form {
+/* display flex om de button en formulier vlak naast elkaar te zetten*/
+footer form {
 	display: flex;
 }
 
-form > input:first-of-type {
+footer form > input:first-of-type {
 	color: white;
 	background: transparent;
 	border: 1px solid white;
@@ -664,6 +711,9 @@ form > input:first-of-type::placeholder {
 	color: white;
 	font-family: 'Noto Serif Khojki', serif;
 }
+form> input:focus-visible {
+	border: #ff8527 4px solid;
+  }
 
 footer form > input:last-of-type {
 	padding: .5em 1.5em;
@@ -703,6 +753,13 @@ form > input:last-of-type:hover{
     padding-bottom: 3px;
     padding-left: 2px;
 }
+/* video */
+video{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+
 
 /* overflow zijwaards scrollen */
 
@@ -716,6 +773,11 @@ form > input:last-of-type:hover{
 	display: inline-block;
 	max-width:80%;
 	margin: 0 10px 0px 10px;
+	vertical-align: top;
+}
+
+.schlindert section ul li p{
+	white-space: break-spaces;
 }
 .schlindert section ul li img{
 	max-width: 90%;
@@ -723,12 +785,12 @@ form > input:last-of-type:hover{
 }
 
 .schlindert section h3{
+	font-family: 'Noto Serif Khojki', serif;
 	letter-spacing: 2px;
     font-size: 21px;
     font-weight: 400;
     color: var(--color-fontwhite);
     margin: 0px 0px 10px 0px;
-	font-family: Noto Serif Khojki', serif;
 }
 
 
@@ -743,49 +805,131 @@ form > input:last-of-type:hover{
 
 
 
-/* padding: boven rechts onder links; */
-
-/* DARK MODE */
 
 
-/* uitklapbaar menu */
 
-nav>ul>li:last-of-type>ul{
-	display: none;
-}
-
-nav>ul>li:last-of-type>button{
-	border:none;
-	border-radius:.25em; 
-	background-color: transparent;
-}
-
-.laatmenuzien{
-	display: block;
-}
-
-video{
-	width: 100%;
-	height: 100%;
-	margin-bottom: 20px;
-}
-
+/* extra derde pagina om te oefenen met formulieren */
+/* Mijn account h1 */
 .login h1{
 	text-align: left;
     display: inline-block;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--color-gray);
 	font-size: 12px;
     letter-spacing: 2px;
     font-weight: 400;
     margin: 60px auto 30px;
 }
+
+/* algemene stijling */
 .login main{
 	padding:var(--pading-detail);
 }
+.login form{
+	display: flex;
+	flex-direction: column;
 
+}
+/* h2 login en registreren */
 .login h2{
 	font-size: 16px;
     letter-spacing: 1px;
     font-weight: 400;
-    margin: 30px 0;
+	margin: 30px auto;
 }
+/* label email adress en password */
+.login label{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 300;
+	color: var(--color-grijzefont);
+	font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+/* typ veld */
+
+.login input{
+	border: 1px solid var(--color-sectionfirst);
+	padding: 10px;
+	background-color: transparent;
+	margin-bottom: 15px;
+}
+/* privacy policy */
+.login main>p:first-of-type>a{
+	color: var(--color-text);
+	text-decoration: none;
+}
+/* lost password */
+.login main p:first-of-type{
+	margin: 2em 0 10em 0;
+	font-size: 11px;
+}
+/* voorwaarden registeren */
+.login main>p:last-of-type>a {
+    color: var(--color-gray);
+    outline: none;
+}
+
+.login main p:last-of-type{
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+/* button login en registreren */
+.login main button{
+	display: block;
+	padding: 0.62em 1em;
+    font-weight: 600;
+	color: var(--color-sectionsecond);
+    background-color: var(--backgroundcolor-button);
+    border: 0;
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 20px;
+}
+
+/* remember me  */
+.login span{
+	margin-top: 20px;
+}
+
+
+/* footer pagina */
+.login footer{
+	background-color: var(--backgroundcolor-footer);
+	padding: 20px;
+}
+
+.login footer p{
+	color: var(--color-fontwhite);
+}
+/* MISLUKT HAMBURGER MENU 
+ header nav ul li:last-of-type>ul.toonMenu{
+	transform: translateX(0);
+}
+
+header nav li:last-of-type ul{ 
+	background-color:#DBE1E4 ;
+	position: fixed;
+	transform: translateX(-100%);
+	transition: 1s;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+nav ul li:last-of-type ul{
+	position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+	bottom: 0;
+	top:0;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.openmaken, nav ul li:last-of-type ul:focus-within{
+	display: block;
+		transition: 0.3s ease-in-out;
+		transform: translateY(0);
+} */ 

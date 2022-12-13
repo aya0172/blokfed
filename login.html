@@ -21,36 +21,45 @@
                     <input for="search" type="text" placeholder="Search...">
                   </div>
                 </li>
-                <!-- uitklapbaar hamburgermenu --> 
                 <li>
                     <button aria-label="menu">
                         <img src="./image/lines.png" alt="hamburgermenu">
                     </button>
-                    <ul>
-                        <li>ARCHITECTURE</li>
-                        <li>DESIGN</li>
-                        <li>ART</li>
-                        <li>STYLE</li>
-                    </ul>
                 </li>
 
             </ul>
         </nav>    
     </header> 
    <main>
-    <h1>MY ACCOUNT</h1>
-    <h2>Login</h2>
-    <form>
-        <form action="mailto: cereal@gmail.com" method="post">
-          <label for="emailadress">EMAIL ADDRESS</label>
-          <input name="emailaddress" type="email" placeholder="anything@example.com" required/>
-          <label for="password">PASSWORD </label>
-          <input name="lastName" placeholder="Last Name" required/>
-          <label for="emailAddress">Email Address <sup>*</sup></label>
-          <input name="emailaddress" type="email" placeholder="anything@example.com" required/>
-    </form>
+            <h1>MY ACCOUNT</h1>
+            <h2>Login</h2>
+            <form>
+                <label for="emailadress">EMAIL ADDRESS</label>
+                <input name="emailaddress" type="email" required/>
+                <label for="password">PASSWORD </label>
+                <input type="password" required/>
+            </form>
+            <button type="submit" name="login" value="Log in">Log in</button>
+
+            <label for="checkbox">
+                <input type="checkbox" value="forever">
+                <span>Remember me</span>
+            </label>
+            <p><a href="#">Lost your password?</a></p>
+            <h2>Register</h2>
+            <form>
+                <label for="emailadress">EMAIL ADDRESS</label>
+                <input name="emailaddress" type="email"required/>
+                <label for="password">PASSWORD </label>
+                <input type="password" required/>
+        </form>
+        <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#">privacy policy.</a></p>
+        <button type="submit" name="login" value="Log in">Register</button>
+
    </main>
-  
+  <footer>
+    <p>Copyright CEREAL 2022</p>
+  </footer>
 </body>
 
 <script src="./scripts/script.js"></script>
