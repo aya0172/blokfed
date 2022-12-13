@@ -1,0 +1,909 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-background);
+}
+
+::selection {
+	color: var(--color-fontwhite);
+	background-color: var(--color-text);
+  }
+
+
+/* CUSTOM PROPERTIES */
+
+:root {
+	--color-text:#111;
+	--color-background:#f4f4f4;
+	--color-nav: #f4f4f4;
+	--color-sectionfirst:#bdbebf;
+	--color-sectionsecond:#404040;
+	--color-grijzefont: #404040;
+	--color-fontwhite:#fff;
+	--padding-algemeen: 60px 20px 0px 20px;
+	--color-gray: #808080;
+	--pading-detail:0px 20px 0px 20px;
+	--backgroundcolor-footer: #4d4d4d;
+	--backgroundcolor-button:#ebe9eb;
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+	  /* general */
+	  --color-background:#000000;
+	  --color-gray:rgb(201, 201, 201);
+	  --color-text:var(--color-fontwhite);
+	  --color-sectionfirst:rgb(48, 48, 48);
+	  --color-grijzefont: white;
+	  --backgroundcolor-footer: #000000;
+	  --color-nav:rgb(111, 111, 111);
+	}
+  }
+
+/* MIJN STYLING */
+*{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+	width: 100vw;
+	background-color: var(--color-nav);
+	padding: 10px 20px;
+	margin-left:auto;
+}
+
+
+nav > ul {
+	display: flex;
+	justify-content: end;
+	list-style: none;
+}
+
+
+nav > ul > li:first-of-type {
+	flex-grow: 1;
+	margin-top: 1vw;
+}
+
+/* icoontjes nav */
+nav ul li:nth-of-type(2), nav ul li:nth-of-type(3), nav ul li:nth-of-type(4){
+	padding: 10px;
+	width: 10vw;
+}
+nav ul li:nth-of-type(3) button{
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+.balkopen img{
+	content: url(/image/close.png);
+	outline: none;
+	height: 14px;
+	width: 14px;
+	margin-left: 3px;
+	
+}
+
+nav>ul>li img{
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+/* serach bar */
+
+nav ul li:nth-of-type(3) input{
+	margin-left:-15em;
+	padding: .4em;
+	margin-top: 1em;
+	display: none;
+	
+}
+
+nav ul li:nth-of-type(3) input:focus-visible {
+	border: #ff8527 4px solid;
+	transform:translate(-.25em, -.25em);
+  }
+
+
+nav ul li:nth-of-type(3) .opensearch{
+	display: block;
+}
+
+/* Van zoek icoon naar kruis */
+
+.kruis{
+	background-image: url(/image/close.png);
+}
+
+
+
+
+/* STYLING H1 LOGO */
+
+nav > ul > li >h1{
+	font-family: 'Roboto Mono', monospace;;
+	font-weight: 400;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+
+
+nav ul li h1 a{
+	text-decoration: none;
+	color:var(--color-text);
+}
+/* nav voor tweede pagina omdat de titel van de article de h1 wordt */
+nav ul li p{
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+nav ul li p a{
+	text-decoration: none;
+	color:var(--color-text);
+}
+
+/* Titel latest article */
+
+.home main section:first-of-type>h2{
+	display: none;
+}
+
+
+/* algemene body style */
+section{
+	padding: var(--padding-algemeen);
+}
+
+/* EERSTE PAGINA ******************/
+
+/* eerste afbeelding */
+
+.home>main>div>img{
+	display: block;
+	width: 100%;
+	padding:0px 20px 0px 20px;
+}
+
+/* algemene styling */
+a:focus{
+	border: #ff8527 4px solid;
+}
+
+
+
+
+/* animatie begin overlaycereal magazine */
+
+main>div {
+	position: relative;
+}
+  
+main>div>img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+  
+div>div {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	transition: .5s ease;
+  }
+  
+  main>div:hover div{
+	bottom: 0;
+	height: 100%;
+  }
+ 
+ div>div {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	transition: .5s ease;
+  }
+  
+div:hover div{
+bottom: 0;
+height: 100%;
+}
+
+
+div>p{
+	color: white;
+	font-size: 60px;
+	font-family: 'Noto Serif Khojki', serif;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* animatie voor inzoomen van afbeeldingen op artikelen */
+
+.home a img:hover{
+	animation-name:zoom-animation;
+	animation-duration:1s;
+	animation-delay: 200ms;
+}
+
+@keyframes zoom-animation {
+	0% {
+	  transform:scale(1);
+	}
+	100% {
+	  transform:scale(1.1);
+	  opacity: 0.8;
+	}
+  }
+
+/* image van elk artikel */
+
+  .home a img{
+	width: 100%;
+}
+  
+/* Meta data van elk artikel */
+
+
+.home main footer a::after{
+	content: "|";
+	margin-left: 7px;
+    margin-right: 7px;
+}
+.home main>section>article>footer>a{
+	text-decoration: none;
+	font-size: 6px;
+    color: var(--color-gray);
+    opacity: .8;
+    vertical-align: 1px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+
+
+
+.home article p{
+	font-weight: bolder;
+	color: var(--color-text);
+	font-family: 'Noto Serif Khojki', serif;
+	font-weight: 400;
+	font-size:12px;
+	max-width: calc(100% - 10px);
+}
+
+.home article h3{
+	font-family: 'Noto Serif Khojki', serif;
+	color: var(--color-text);
+	font-size: 14px;
+	margin-bottom: 12px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin-top:2px;
+}
+
+.home article{
+	margin-bottom: 40px;
+}
+
+
+.home ul li p{
+	font-size: 12px;
+	margin-bottom: 50px;
+}
+
+/* grijze vlak */
+
+
+.home section:nth-of-type(2){
+	background-color: var(--color-sectionfirst);
+}
+
+
+
+
+/* knop shop */
+.home section:nth-of-type(2)>a:first-of-type{
+	border: 1px solid #404040;
+    padding: 12px 24px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 9px;
+    color: var(--color-grijzefont);
+	font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+	margin: 0 0 40px;
+	margin-bottom: 40px;
+}
+
+.home section:nth-of-type(2)>a:first-of-type:hover,
+.home section:nth-of-type(2)>a:first-of-type:focus-visible {
+    background: rgb(158, 158, 158) 75%;
+  box-shadow:inset .25rem .25rem #0006;;
+  color: white;
+}
+
+/* grote plaatje h3 groot in het grijze vlak */
+
+.home section:nth-of-type(2)>h3:first-of-type{
+    font-size: 34px; 
+    max-width: 500px;
+    letter-spacing: 4px;
+    font-weight: 400;
+	color: var(--color-grijzefont);
+}
+/* plaatje in het grijze vlak */
+
+.home section:nth-of-type(2) > img{
+	width: 100%;
+	margin-top: 40px;
+}
+
+
+
+
+.home section:nth-of-type(2) p{
+	font-size: 12px;
+	margin: 20px 0 40px;
+	line-height: 1.7;
+	color: var(--color-text);
+}
+
+section:nth-of-type(2)>h2{
+	font-family: 'Noto Serif Khojki', serif;
+	text-align: left;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding-bottom: 3px;
+    color: #fff;
+    padding-left: 2px;
+	margin-top: 30px;
+}
+
+/* Plaatjes featured products */
+section:nth-of-type(2) ul li img{
+	width: 100%;
+}
+
+/* titel plaatjes */
+
+.home section:nth-of-type(2) ul li{
+	list-style: none;
+}
+
+.home section:nth-of-type(2) ul{
+	padding: 30px 0px 30px 0px;
+}
+
+.home section:nth-of-type(2)>ul li h3{
+	letter-spacing: 2px; 
+    font-size: 14px; 
+    font-weight: 400;
+	color: var(--color-fontwhite);
+	margin: 10px 0px 10px 0px ;
+}
+/* padding: boven rechts onder links; */
+
+.home section:nth-of-type(2) li p{
+	text-decoration: none;
+	font-size: 8px;
+    color: var(--color-grijzefont);
+    opacity: .8;
+    vertical-align: 1px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 1px;
+}
+
+
+
+/*Footer van article oftewel Metadata */
+
+.home>main footer>a::after{
+	content: "|";
+	margin-left: 7px;
+    margin-right: 7px;
+}
+.home main>section>article>footer>a{
+	text-decoration: none;
+	font-size: 7px;
+    color: var(--color-gray);
+    opacity: .8;
+    vertical-align: 1px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+/* FOOTER VAN PAGINA */
+.home>footer{
+	background-color: var(--backgroundcolor-footer);
+	margin: 0 auto;
+    padding: 100px 37px;
+}
+
+
+footer>p{
+	color: var(--color-gray);
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+footer ul li{
+    width: 100%;
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+
+
+/* De ul die direct kind is van de footer */
+footer > ul {
+	display: flex;
+	list-style: none;
+	max-width: 20rem;
+	margin-top: 40px;
+}
+
+footer > ul h3 {
+	margin-bottom: 4px;
+	color: var(--color-gray);
+	letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+footer ul li{
+	color: #f5f5f5;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.9;
+}
+footer>h3{
+	margin-bottom: 11px;
+	color: var(--color-gray);
+	letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+/* Styling voor de lijstjes onder info, media en website. */
+footer > ul > li > ul {
+	list-style: none;
+	padding: 0;
+}
+
+
+footer:last-of-type>ul li img{
+	width: 40%;
+	height: 40%;
+}
+
+footer form{
+	position: static;
+}
+
+
+
+
+/* TWEEDE PAGINA ***************************/
+
+.schlindert main>img:first-of-type{
+	width: 100%;
+	padding: var(--pading-detail);
+	opacity: 0.6;
+  	transition: 0.3s;
+}
+
+.schlindert main>img:first-of-type:hover{
+	opacity: 1;
+}
+
+.schlindert main article{
+	padding: var(--pading-detail);
+}
+
+
+
+.schlindert>footer{
+	text-decoration: none; 
+    font-size: 6px;
+    vertical-align: 1px;
+    font-weight: 400;
+	line-height: 1;
+	background-color:var(--backgroundcolor-footer);
+	margin: 0 auto;
+	padding: 100px 37px;
+}
+	
+
+.schlindert main>article {
+	padding: 0px 20px 0px 20px;
+}
+
+
+
+.schlindert main footer>a{
+	text-decoration: none; 
+    font-size: 8px;
+    color: var(--color-gray);
+    opacity: .8;
+    vertical-align: 1px;
+    font-weight: 400;
+	line-height: 1;
+	letter-spacing: 1px;
+}
+
+.schlindert>main>footer:first-of-type{
+	text-decoration: none; 
+    font-size: 8px;
+    color: gray;
+    opacity: .8;
+    vertical-align: 1px;
+    font-weight: 400;
+	line-height: 1;
+	letter-spacing: 1px;
+	margin-top: 40px;
+	padding: var(--pading-detail);
+}
+
+
+.schlindert main section footer:first-of-type{
+	margin-top: 15px;
+}
+
+schlindert main section footer{
+	margin-top: 0px;
+	margin-left: 20px;
+}
+
+.schlindert>main footer>a::after{
+	content: "|";
+	margin-left: 7px;
+    margin-right: 7px;
+}
+
+
+
+.schlindert h1{
+	font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 5px 0 0;
+	font-family: 'Noto Serif Khojki', serif;
+	color: var(--color-text);
+}
+
+.schlindert article p:first-of-type{
+	font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--color-gray);
+	line-height: 1.7;
+	font-weight: 400;
+}
+
+.schlindert article p:nth-of-type(2){
+	font-size: 13px;
+	padding:20px 0 20px 20px ;
+	color: var(--color-gray);
+	line-height: 1.7;
+	font-style: italic;
+	font-weight:400;
+}
+
+
+/* algemeen tussenruimte p */
+.schlindert p{
+	margin-bottom: 1.5em;
+}
+
+.schlindert p:nth-of-type(3):first-letter {
+    float: left;
+    color: gray;
+    font-size: 42px;
+    line-height: 39px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 3px;
+}
+
+.schlindert>main>article p{
+	font-size: 14px;
+    max-width: 500px;
+    padding-right: 50px; 
+    line-height: 1.7;
+	color: var(--color-text);
+}
+
+/* BLOK WORDS EN WEBSITE */
+.schlindert article p>a{
+	text-decoration: none;
+    font-style: italic;
+	color: #999;
+    transition: color .3s ease-in;
+	font-weight: bold;
+}
+
+.schlindert article p>a:visited {
+	color:rgb(119, 37, 137);
+  }
+
+.schlindert article ul{
+	padding: 20px 0; 
+    margin-bottom: 20px;
+}
+
+.schlindert article ul{
+	border-top: 1px solid #bebebe;
+    padding-top: 20px;
+}
+
+.schlindert article li{
+	list-style: none;
+    display: block;
+    letter-spacing: 2px;
+    font-size: 9px;
+    margin-bottom: 2px;
+	text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 2px;
+}
+
+
+/* Newsletter */
+
+/* display flex om de button en formulier vlak naast elkaar te zetten*/
+footer form {
+	display: flex;
+}
+
+footer form > input:first-of-type {
+	color: white;
+	background: transparent;
+	border: 1px solid white;
+	padding: .5em;
+}
+
+form > input:first-of-type::placeholder {
+	color: white;
+	font-family: 'Noto Serif Khojki', serif;
+}
+form> input:focus-visible {
+	border: #ff8527 4px solid;
+  }
+
+footer form > input:last-of-type {
+	padding: .5em 1.5em;
+	background: none;
+	color: white;
+	border: 1px solid white;
+	text-indent: -99999px;	
+ 	background: url(/image/right.png); 
+ 	background-repeat: no-repeat; 
+ 	background-size: 1.5em 1.5em;
+ 	background-position: center center;
+}
+
+form > input:last-of-type:hover{
+	background-color:rgb(255, 255, 255);
+}
+
+/* selectie further reading */
+
+.schlindert section li{
+	list-style: none;
+}
+
+.schlindert section {
+	background-color: var(--color-sectionfirst);
+}
+
+.schlindert section h2{
+	text-align: left;
+	color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 60px;
+    display: inline-block;
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+/* video */
+video{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+
+
+/* overflow zijwaards scrollen */
+
+.schlindert section ul{
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.schlindert section ul li{
+	display: inline-block;
+	max-width:80%;
+	margin: 0 10px 0px 10px;
+	vertical-align: top;
+}
+
+.schlindert section ul li p{
+	white-space: break-spaces;
+}
+.schlindert section ul li img{
+	max-width: 90%;
+	max-height: 80%;
+}
+
+.schlindert section h3{
+	font-family: 'Noto Serif Khojki', serif;
+	letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--color-fontwhite);
+    margin: 0px 0px 10px 0px;
+}
+
+
+.schlindert section ul li footer a{
+	color: var(--color-text);
+}
+
+
+.schlindert section ul li p{
+	color: var(--color-text);
+}
+
+/* DARK MODE */
+
+
+nav>ul>li:last-of-type>button{
+	border:none;
+	border-radius:.25em; 
+	background-color: transparent;
+}
+
+/* extra derde pagina om te oefenen met formulieren */
+
+.login h1{
+	text-align: left;
+    display: inline-block;
+    border-bottom: 1px solid var(--color-gray);
+	font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 60px auto 30px;
+}
+.login main{
+	padding:var(--pading-detail);
+}
+
+.login h2{
+	font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+	margin: 30px auto;
+}
+.login label{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 300;
+	color: var(--color-grijzefont);
+	font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.login main>p:first-of-type>a{
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+.login main p:first-of-type{
+	margin: 2em 0 10em 0;
+	font-size: 11px;
+}
+.login main>p:last-of-type>a {
+    color: var(--color-gray);
+    outline: none;
+}
+.login main p:last-of-type{
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+.login main button{
+	display: block;
+	padding: 0.62em 1em;
+    font-weight: 600;
+	color: var(--color-sectionsecond);
+    background-color: var(--backgroundcolor-button);
+    border: 0;
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 20px;
+}
+
+.login input{
+	border: 1px solid var(--color-sectionfirst);
+	padding: 10px;
+	background-color: transparent;
+	margin-bottom: 15px;
+}
+.login span{
+	margin-top: 20px;
+}
+.login form{
+	display: flex;
+	flex-direction: column;
+
+}
+/* MISLUKT HAMBURGER MENU 
+ header nav ul li:last-of-type>ul.toonMenu{
+	transform: translateX(0);
+}
+
+header nav li:last-of-type ul{ 
+	background-color:#DBE1E4 ;
+	position: fixed;
+	transform: translateX(-100%);
+	transition: 1s;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+nav ul li:last-of-type ul{
+	position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+	bottom: 0;
+	top:0;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.openmaken, nav ul li:last-of-type ul:focus-within{
+	display: block;
+		transition: 0.3s ease-in-out;
+		transform: translateY(0);
+} */ 
