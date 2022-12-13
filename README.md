@@ -161,6 +161,8 @@ student 4: Mats
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Ver gekomen met het opstellen van de hele home pagina. De footer bij elk article wordt wel aangeroepen door een verkeerde selector dus daar moet ik nog aan werken. Ook de footer van de pagina moet ik nog opstellen.
+
   <img src="readme-images/versieweek3" width="375px" alt="tussenstandvanweek 3">
 
   ### Agenda voor meeting
@@ -183,9 +185,10 @@ student 4: Mats
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Antwoord op m'n vraag: je kan de verwijzing bij de url opschrijven zoals je het in een img tag aanroept.
+  - Hulp gekregen hoe ik een afbeelding in een input kan zetten.
+  - Nagevraagd of je een ul in een li kan zetten.En dat is toegestaan.
+
 - ...
 
 </details>
@@ -237,26 +240,39 @@ student 4: Mats
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ 
+  Home pagina
+  <img src="readme-images/week4.png" width="375px" alt="tussenstandvanweek 4">
+  Tweede pagina article
+  <img src="readme-images/pagina2week4.png" width="375px" alt="tussenstandvanweek 4">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  student 1: Marc
+ Snel door mijn code website heen kijken. Punt2 Vragen of mijn website voldoende variatie heeft. Punt 3 Mag ik var gebruiken als container rondom tags die wel syntax hebben.
 
+  student 2: Robin
+  1. mag ik een class gebruiken om een h1 visually hidden te maken
+  2. responsiveness op mijn 2e pagina werkt niet helemaal
+  3. is er genoeg variatie voor het service deel of moet ik nog meer toevoegen
+  4. waarom ik maar op 1 button kan klikken en de andere buttons dan niet werken terwijl ze hetzelfde doen.
+
+  student 3: Aya
+  Hoe kan ik ervoor zorgen dat de p tag in de li ook mee wrapt en niet door elkaar heen lopen bij een zijwaardse scroll?
+
+  student 4: Mats
+  Vragen of het gebruik van div’s correct is.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Antwoord op m'n vraag: white-space: break-spaces;
+  - Ik weet nu hoe ik een zijwaardse scroll kan maken in css.
+  - Probeer de twee pagina's meer divers van elkaar te maken.
+  - Maak gebruik van DOM manipulatie.
+  - De H1 wordt op de tweede pagina de titel van het artikel (schlindert House).
 
 </details>
 
