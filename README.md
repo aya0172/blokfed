@@ -103,7 +103,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src=".\break.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/breakdown.png" width="375px" alt="breakdown van de hele pagina">
 
 
 </details>
@@ -163,7 +163,7 @@ student 4: Mats
 
   Ver gekomen met het opstellen van de hele home pagina. De footer bij elk article wordt wel aangeroepen door een verkeerde selector dus daar moet ik nog aan werken. Ook de footer van de pagina moet ik nog opstellen.
 
-  <img src="readme-images/versieweek3" width="375px" alt="tussenstandvanweek 3">
+  <img src="readme-images/versieweek3.png" width="375px" alt="tussenstandvanweek 3">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
